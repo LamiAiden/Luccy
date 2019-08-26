@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.40629.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.645
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{DFA48E27-7D53-4955-A722-3D91A7119BE7}"
 	ProjectSection(SolutionItems) = preProject
@@ -19,6 +19,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Luccy.WebApi", "Luccy.WebApi\Luccy.WebApi.csproj", "{5EB52D3D-09FD-463A-B02A-8D9856BD3724}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Luccy.Web", "Luccy.Web\Luccy.Web.csproj", "{404A6D3B-AA85-4E4C-AEEE-1E5026D5F135}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Luccy.Common", "Luccy.Common\Luccy.Common.csproj", "{A229A6AD-5E34-40C0-820E-F61B2FB8ECD0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -46,10 +48,15 @@ Global
 		{404A6D3B-AA85-4E4C-AEEE-1E5026D5F135}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{404A6D3B-AA85-4E4C-AEEE-1E5026D5F135}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{404A6D3B-AA85-4E4C-AEEE-1E5026D5F135}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A229A6AD-5E34-40C0-820E-F61B2FB8ECD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A229A6AD-5E34-40C0-820E-F61B2FB8ECD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A229A6AD-5E34-40C0-820E-F61B2FB8ECD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A229A6AD-5E34-40C0-820E-F61B2FB8ECD0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8901C346-A01C-44DA-A70C-D745AAC479DD}
+	EndGlobalSection
 EndGlobal
-
-

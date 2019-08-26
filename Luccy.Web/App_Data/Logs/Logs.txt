@@ -1,0 +1,23 @@
+DEBUG 2019-08-26 22:54:05,854 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2019-08-26 22:54:05,870 [1    ] Abp.Modules.AbpModuleManager             - Found 12 ABP modules in total.
+DEBUG 2019-08-26 22:54:05,877 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Luccy.Web.LuccyWebModule, Luccy.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-08-26 22:54:05,879 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-08-26 22:54:05,879 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-08-26 22:54:05,880 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-08-26 22:54:05,880 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-08-26 22:54:05,880 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Luccy.LuccyDataModule, Luccy.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-08-26 22:54:05,881 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-08-26 22:54:05,881 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-08-26 22:54:05,881 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Luccy.LuccyCoreModule, Luccy.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-08-26 22:54:05,881 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Luccy.LuccyApplicationModule, Luccy.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-08-26 22:54:05,881 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Luccy.LuccyWebApiModule, Luccy.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-08-26 22:54:05,881 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-08-26 22:54:05,885 [1    ] Abp.Modules.AbpModuleManager             - 12 modules loaded.
+DEBUG 2019-08-26 22:54:06,269 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: Luccy.EntityFramework.LuccyDbContext, Luccy.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-08-26 22:54:08,423 [1    ] Abp.Localization.LocalizationManager     - Initializing 3 localization sources.
+DEBUG 2019-08-26 22:54:08,553 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2019-08-26 22:54:08,595 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2019-08-26 22:54:08,622 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Luccy
+DEBUG 2019-08-26 22:54:08,816 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+WARN  2019-08-26 22:54:19,452 [8    ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.
+WARN  2019-08-26 22:54:19,495 [8    ] Abp.Logging.LogHelper                    - ISettingStore is not implemented, using DefaultConfigSettingStore which does not support GetAllListAsync.

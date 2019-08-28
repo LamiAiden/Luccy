@@ -1,5 +1,9 @@
-﻿using System.Data.Common;
+﻿using System;
+using System.Data.Common;
+using System.Data.Entity;
 using Abp.EntityFramework;
+using Luccy.Entity.Sys;
+using Luccy.Mapping.Sys;
 
 namespace Luccy.EntityFramework
 {
@@ -8,7 +12,7 @@ namespace Luccy.EntityFramework
         //TODO: Define an IDbSet for each Entity...
 
         //Example:
-        //public virtual IDbSet<User> Users { get; set; }
+        public virtual IDbSet<SysUser> SysUser { get; set; }
 
         /* NOTE: 
          *   Setting "Default" to base class helps us when working migration commands on Package Manager Console.
@@ -43,5 +47,15 @@ namespace Luccy.EntityFramework
         {
 
         }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            dynamic user = Activator.CreateInstance(typeof(SysUserMap));
+            modelBuilder.Configurations.Add(user);
+
+            base.OnModelCreating(modelBuilder);
+        }
+
+
     }
 }

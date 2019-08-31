@@ -1,7 +1,7 @@
 ﻿using Abp.Domain.Entities;
 using Abp.EntityFramework;
 using Abp.EntityFramework.Repositories;
-using Luccy.Common.CommonModel;
+using Luccy.Core.CommonModel;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -20,13 +20,23 @@ namespace Luccy.EntityFramework.Repositories
 
         }
 
+        private LuccyDbContext dbContext=null;
+
+        public LuccyDbContext GetDBContext()
+        {
+            if (dbContext == null)
+            {
+                return new LuccyDbContext();
+            }
+            else return dbContext;
+        }
 
         public List<TEntity> FindList(Pagination pagination)
         {
             bool isAsc = pagination.sord.ToLower() == "asc" ? true : false;
             string[] _order = pagination.sidx.Split(',');
             MethodCallExpression resultExp = null;
-            var tempData = new LuccyDbContext().Set<TEntity>().AsQueryable();
+            var tempData = GetDBContext().Set<TEntity>().AsQueryable();
             foreach (string item in _order)
             {
                 string _orderPart = item;
@@ -54,7 +64,7 @@ namespace Luccy.EntityFramework.Repositories
             bool isAsc = pagination.sord.ToLower() == "asc" ? true : false;
             string[] _order = pagination.sidx.Split(',');
             MethodCallExpression resultExp = null;
-            var tempData = new LuccyDbContext().Set<TEntity>().Where(predicate);
+            var tempData = GetDBContext().Set<TEntity>().Where(predicate);
             foreach (string item in _order)
             {
                 string _orderPart = item;

@@ -12,8 +12,8 @@ namespace Luccy.EntityFramework
         //TODO: Define an IDbSet for each Entity...
 
         //Example:
-        public virtual IDbSet<SysUser> SysUser { get; set; }
-
+        public virtual IDbSet<SysUserEntity> SysUser { get; set; }
+        public virtual IDbSet<SysModuleEntity> SysModule { get; set; }
         /* NOTE: 
          *   Setting "Default" to base class helps us when working migration commands on Package Manager Console.
          *   But it may cause problems when working Migrate.exe of EF. If you will apply migrations on command line, do not
@@ -52,6 +52,8 @@ namespace Luccy.EntityFramework
         {
             dynamic user = Activator.CreateInstance(typeof(SysUserMap));
             modelBuilder.Configurations.Add(user);
+            dynamic Module = Activator.CreateInstance(typeof(SysModuleMap));
+            modelBuilder.Configurations.Add(Module);
 
             base.OnModelCreating(modelBuilder);
         }

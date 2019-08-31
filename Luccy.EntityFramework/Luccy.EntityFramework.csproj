@@ -193,7 +193,9 @@
   <ItemGroup>
     <Compile Include="EntityFramework\LuccyDbContext.cs" />
     <Compile Include="EntityFramework\Repositories\LuccyRepositoryBase.cs" />
+    <Compile Include="EntityFramework\Repositories\Sys\SysModuleRepository.cs" />
     <Compile Include="EntityFramework\Repositories\Sys\SysUserRepository.cs" />
+    <Compile Include="Mapping\Sys\SysModuleMap.cs" />
     <Compile Include="Mapping\Sys\SysUserMap.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="LuccyDataModule.cs" />

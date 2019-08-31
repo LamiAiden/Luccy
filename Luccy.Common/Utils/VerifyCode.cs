@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Luccy.Common.Enum;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Imaging;
@@ -30,7 +31,7 @@ namespace Luccy.Common.Utils
                 chkCode += character[rnd.Next(character.Length)];
             }
             //写入Session、验证码加密
-          //  WebHelper.WriteSession("nfine_session_verifycode", Md5.md5(chkCode.ToLower(), 16));
+            SessionHelper.WriteSession(SessionKey.session_verifycode.ToString(), Md5.GetMD5(chkCode.ToLower()));
             //创建画布
             Bitmap bmp = new Bitmap(codeW, codeH);
             Graphics g = Graphics.FromImage(bmp);

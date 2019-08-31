@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Luccy.Common.CommonModel
+namespace Luccy.Core.CommonModel
 {
     public class AjaxResult
     {

@@ -390,21 +390,21 @@ $.fn.bindSelect = function (options) {
         });
     }
 }
-$.fn.authorizeButton = function () {
-    var moduleId = top.$(".NFine_iframe:visible").attr("id").substr(6);
-    var dataJson = top.clients.authorizeButton[moduleId];
-    var $element = $(this);
-    $element.find('a[authorize=yes]').attr('authorize', 'no');
-    if (dataJson != undefined) {
-        $.each(dataJson, function (i) {
+//$.fn.authorizeButton = function () {
+//    var moduleId = top.$(".NFine_iframe:visible").attr("id").substr(6);
+//    var dataJson = top.clients.authorizeButton[moduleId];
+//    var $element = $(this);
+//    $element.find('a[authorize=yes]').attr('authorize', 'no');
+//    if (dataJson != undefined) {
+//        $.each(dataJson, function (i) {
            
-            $element.find("#" + dataJson[i].F_EnCode).attr('authorize', 'yes');
-        });
-    }
-    $element.find("[authorize=no]").parents('li').prev('.split').remove();
-    $element.find("[authorize=no]").parents('li').remove();
-    $element.find('[authorize=no]').remove();
-}
+//            $element.find("#" + dataJson[i].F_EnCode).attr('authorize', 'yes');
+//        });
+//    }
+//    $element.find("[authorize=no]").parents('li').prev('.split').remove();
+//    $element.find("[authorize=no]").parents('li').remove();
+//    $element.find('[authorize=no]').remove();
+//}
 $.fn.dataGrid = function (options) {
     var defaults = {
         datatype: "json",
@@ -413,9 +413,9 @@ $.fn.dataGrid = function (options) {
         shrinkToFit: false,
         gridview: true
     };
-    var options = $.extend(defaults, options);
+    var options1 = $.extend(defaults, options);
     var $element = $(this);
-    options["onSelectRow"] = function (rowid) {
+    options1["onSelectRow"] = function (rowid) {
         var length = $(this).jqGrid("getGridParam", "selrow").length;
         var $operate = $(".operate");
         if (length > 0) {
@@ -427,5 +427,5 @@ $.fn.dataGrid = function (options) {
             $operate.animate({ "left": '-100.1%' }, 200);
         })
     };
-    $element.jqGrid(options);
+    $element.jqGrid(options1);
 };

@@ -16,13 +16,13 @@ $(function () {
     if (storage) {
         try {
             var usedSkin = localStorage.getItem('config-skin');
-            if (usedSkin != '') {
+            if (usedSkin !='') {
                 $('#skin-colors .skin-changer').removeClass('active'); $('#skin-colors .skin-changer[data-skin="' + usedSkin + '"]').addClass('active');
             }
         }
         catch (e) { console.log(e); }
     }
-})
+});
 $.fn.removeClassPrefix = function (prefix) {
     this.each(function (i, el) {
         var classes = el.className.split(" ").filter(function (c) {
@@ -83,7 +83,7 @@ $(function ($) {
                 $item.find('ul.submenu').css({
                     overflow: "auto",
                     height: _height3
-                })
+                });
             });
         }
         else {
@@ -144,27 +144,27 @@ $(function ($) {
             container.removeClass('active');
         }
     });
-    $(window).load(function () {
-        window.setTimeout(function () {
-            $('#ajax-loader').fadeOut();
-        }, 300);
-    });
+    //$(window).load(function () {
+    //    window.setTimeout(function () {
+    //        $('#ajax-loader').fadeOut();
+    //    }, 300);
+    //});
 });
 function GetLoadNav() {
     var data = top.clients.authorizeMenu;
     var _html = "";
     $.each(data, function (i) {
         var row = data[i];
-        if (row.F_ParentId == "0") {
+        if (row.ParentId == "0") {
             _html += '<li>';
-            _html += '<a data-id="' + row.F_Id + '" href="#" class="dropdown-toggle"><i class="' + row.F_Icon + '"></i><span>' + row.F_FullName + '</span><i class="fa fa-angle-right drop-icon"></i></a>';
+            _html += '<a data-id="' + row.Id + '" href="#" class="dropdown-toggle"><i class="' + row.Iconic + '"></i><span>' + row.Name + '</span><i class="fa fa-angle-right drop-icon"></i></a>';
             var childNodes = row.ChildNodes;
             if (childNodes.length > 0) {
                 _html += '<ul class="submenu">';
                 $.each(childNodes, function (i) {
                     var subrow = childNodes[i];
                     _html += '<li>';
-                    _html += '<a class="menuItem" data-id="' + subrow.F_Id + '" href="' + subrow.F_UrlAddress + '" data-index="' + subrow.F_SortCode + '">' + subrow.F_FullName + '</a>';
+                    _html += '<a class="menuItem" data-id="' + subrow.Id + '" href="' + subrow.Url + '" data-index="' + subrow.Sort + '">' + subrow.Name + '</a>';
                     _html += '</li>';
                 });
                 _html += '</ul>';

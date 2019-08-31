@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Luccy.Entity.Sys
 {
-    public class SysUser:Abp.Domain.Entities.Entity<string>
+    public class SysUserEntity:Abp.Domain.Entities.Entity<string>
     {
         [Display(Name = "Id")]
         public override string Id { get; set; }
@@ -67,7 +67,7 @@ namespace Luccy.Entity.Sys
         [Display(Name = "在职状态")]
         public bool State { get; set; }
 
-        [Display(Name = "入职时间")]
+        [Display(Name = "添加时间")]
         public DateTime? CreateTime { get; set; }
 
 
@@ -135,8 +135,6 @@ namespace Luccy.Entity.Sys
 
         [Display(Name = "附件")]
         public string Attach { get; set; }
-        [Display(Name = "角色")]
-        public string Flag { get; set; }//用户分配角色
-
+     
     }
 }

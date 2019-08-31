@@ -100,11 +100,12 @@
                             type: "post",
                             dataType: "json",
                             success: function (data) {
+                                console.log(data);
                                 if (data.state == "success") {
                                     $("#login_button").find('span').html("登录成功，正在跳转...");
-                                    window.setTimeout(function () {
+                                   // window.setTimeout(function () {
                                         window.location.href = "/Home/Index";
-                                    }, 500);
+                                   // }, 500);
                                 } else {
                                     $("#login_button").removeAttr('disabled').find('span').html("登录");
                                     $("#switchCode").trigger("click");

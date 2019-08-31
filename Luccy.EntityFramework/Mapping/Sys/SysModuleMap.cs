@@ -8,11 +8,11 @@ using System.Threading.Tasks;
 
 namespace Luccy.Mapping.Sys
 {
-    public  class SysUserMap: EntityTypeConfiguration<SysUserEntity>
+    public  class SysModuleMap :EntityTypeConfiguration<SysModuleEntity>
     {
-        public SysUserMap()
+        public SysModuleMap()
         {
-            this.ToTable("SysUser");
+            this.ToTable("SysModule");
             this.HasKey(t => t.Id);
         }
     }

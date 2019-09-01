@@ -691,6 +691,7 @@
     <Content Include="Content\js\jquery-ui\images\ui-icons_cd0a0a_256x240.png" />
     <Content Include="Content\js\jquery-ui\jquery-ui.min.css" />
     <Content Include="Content\js\jquery-ui\jquery-ui.min.js" />
+    <Content Include="Content\js\jquery\jquery.treegrid.js" />
     <Content Include="Content\js\jquery\jquery-2.1.1.min.js" />
     <Content Include="Content\js\jquery\jquery.form.min.js" />
     <Content Include="Content\js\jquery\jquery.jcrop.min.js" />
@@ -830,6 +831,9 @@
     <Compile Include="App_Start\LuccyNavigationProvider.cs" />
     <Compile Include="App_Start\LuccyWebModule.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Areas\Sys\Controllers\SysModuleController.cs" />
+    <Compile Include="Areas\Sys\Controllers\SysModuleOperateController.cs" />
+    <Compile Include="Areas\Sys\Controllers\SysRoleController.cs" />
     <Compile Include="Areas\Sys\Controllers\SysUserController.cs" />
     <Compile Include="Areas\Sys\SysAreaRegistration.cs" />
     <Compile Include="Controllers\ClientsDataController.cs" />
@@ -853,6 +857,9 @@
     <Content Include="Views\Shared\_Form.cshtml" />
     <Content Include="Areas\Sys\Views\SysUser\Index.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Areas\Sys\Views\SysModule\Index.cshtml" />
+    <Content Include="Areas\Sys\Views\SysModuleOperate\Index.cshtml" />
+    <Content Include="Areas\Sys\Views\SysRole\Index.cshtml" />
     <None Include="Views\Shared\_Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

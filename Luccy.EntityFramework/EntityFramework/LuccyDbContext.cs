@@ -14,6 +14,8 @@ namespace Luccy.EntityFramework
         //Example:
         public virtual IDbSet<SysUserEntity> SysUser { get; set; }
         public virtual IDbSet<SysModuleEntity> SysModule { get; set; }
+        public virtual IDbSet<SysModuleOperateEntity> SysModuleOperate { get; set; }
+        public virtual IDbSet<SysRoleEntity> SysRole { get; set; }
         /* NOTE: 
          *   Setting "Default" to base class helps us when working migration commands on Package Manager Console.
          *   But it may cause problems when working Migrate.exe of EF. If you will apply migrations on command line, do not
@@ -54,10 +56,11 @@ namespace Luccy.EntityFramework
             modelBuilder.Configurations.Add(user);
             dynamic Module = Activator.CreateInstance(typeof(SysModuleMap));
             modelBuilder.Configurations.Add(Module);
-
+            dynamic ModuleOperation = Activator.CreateInstance(typeof(SysModuleOperateMap));
+            modelBuilder.Configurations.Add(ModuleOperation);
+            dynamic Role = Activator.CreateInstance(typeof(SysRoleMap));
+            modelBuilder.Configurations.Add(Role);
             base.OnModelCreating(modelBuilder);
         }
-
-
     }
 }

@@ -12,7 +12,7 @@ using System.Web.Mvc;
 
 namespace Luccy.Web.Areas.Sys.Controllers
 {
-    public class SysUserController : LuccyControllerBase
+    public class SysUserController :  LuccyControllerBase
     {
         private ISysModuleApp _sysModuleApp;
         private ISysUserApp _sysUserApp;

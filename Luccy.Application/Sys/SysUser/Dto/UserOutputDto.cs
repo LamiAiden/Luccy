@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Luccy.Sys.SysUser.Dto
 {
-    public  class UserListOutputDto
+    public  class UserOutputDto
     {
         public List<UserDto> UserDtoList { get; set; }
     }

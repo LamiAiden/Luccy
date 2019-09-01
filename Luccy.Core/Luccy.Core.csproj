@@ -178,10 +178,16 @@
   <ItemGroup>
     <Compile Include="CommonModel\AjaxResult.cs" />
     <Compile Include="CommonModel\Pagination.cs" />
+    <Compile Include="CommonModel\TreeGridModel.cs" />
+    <Compile Include="CommonModel\TreeViewModel.cs" />
     <Compile Include="CommonModel\UserInfo.cs" />
     <Compile Include="Entity\Sys\SysModuleEntity.cs" />
+    <Compile Include="Entity\Sys\SysModuleOperateEntity.cs" />
+    <Compile Include="Entity\Sys\SysRoleEntity.cs" />
     <Compile Include="Entity\Sys\SysUserEntity.cs" />
+    <Compile Include="IRepository\Sys\ISysModuleOperateRepository.cs" />
     <Compile Include="IRepository\Sys\ISysModuleRepository.cs" />
+    <Compile Include="IRepository\Sys\ISysRoleRepository.cs" />
     <Compile Include="IRepository\Sys\ISysUserRepository.cs" />
     <Compile Include="LuccyConsts.cs" />
     <Compile Include="LuccyCoreModule.cs" />

@@ -19,11 +19,11 @@ namespace Luccy.Sys.SysUser
             _sysUserRepository = sysUserRepository;
         }
 
-        public UserListOutputDto GetUserList(Pagination pagination, string keyword)
+        public UserOutputDto GetUserList(Pagination pagination, string keyword)
         {
             List<SysUserEntity> userEntityList= _sysUserRepository.GetUserListByPage(pagination, keyword);
             List<UserDto> userDtoList= AutoMapper.Mapper.Map<List<UserDto>>(userEntityList);
-            UserListOutputDto outputDto = new UserListOutputDto();
+            UserOutputDto outputDto = new UserOutputDto();
             outputDto.UserDtoList = userDtoList;
             return outputDto;
         }

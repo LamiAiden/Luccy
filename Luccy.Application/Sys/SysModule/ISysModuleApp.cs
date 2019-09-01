@@ -10,6 +10,8 @@ namespace Luccy.Sys.SysModule
 {
     public  interface ISysModuleApp: IApplicationService
     {
-        ModuleListOutputDto GetModuleList();
+        ModuleOutputDto GetTreeGridList();
+        ModuleOutputDto GetModuleList();
+        ModuleOutputDto GetTreeViewList();
     }
 }

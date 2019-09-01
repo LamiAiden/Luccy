@@ -51,7 +51,7 @@ namespace Luccy.Web.Controllers
             return ToMenuJson(_sysModuleApp.GetModuleList(), "0");
             //return "";
         }
-        private string ToMenuJson(ModuleListOutputDto data, string parentId)
+        private string ToMenuJson(ModuleOutputDto data, string parentId)
         {
             StringBuilder sbJson = new StringBuilder();
             sbJson.Append("[");

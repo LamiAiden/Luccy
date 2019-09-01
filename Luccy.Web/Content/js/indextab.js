@@ -1,5 +1,5 @@
 (function ($) {
-    $.nfinetab = {
+    $.luccytab = {
         requestFullScreen: function () {
             var de = document.documentElement;
             if (de.requestFullscreen) {
@@ -39,7 +39,7 @@
                     }
                 });
                 $(this).addClass('active').siblings('.menuTab').removeClass('active');
-                $.nfinetab.scrollToTab(this);
+                $.luccytab.scrollToTab(this);
             }
         },
         closeOtherTabs: function () {
@@ -102,7 +102,7 @@
                         return false;
                     }
                 });
-                $.nfinetab.scrollToTab($('.menuTab.active'));
+                $.luccytab.scrollToTab($('.menuTab.active'));
             }
             return false;
         },
@@ -110,7 +110,7 @@
             $("#header-nav>ul>li.open").removeClass("open");
             var dataId = $(this).attr('data-id');
             if (dataId != "") {
-                top.$.cookie('nfine_currentmoduleid', dataId, { path: "/" });
+                top.$.cookie('luccy_currentmoduleid', dataId, { path: "/" });
             }
             var dataUrl = $(this).attr('href');
             var menuName = $.trim($(this).text());
@@ -122,7 +122,7 @@
                 if ($(this).data('id') == dataUrl) {
                     if (!$(this).hasClass('active')) {
                         $(this).addClass('active').siblings('.menuTab').removeClass('active');
-                        $.nfinetab.scrollToTab(this);
+                        $.luccytab.scrollToTab(this);
                         $('.mainContent .NFine_iframe').each(function () {
                             if ($(this).data('id') == dataUrl) {
                                 $(this).show().siblings('.NFine_iframe').hide();
@@ -145,13 +145,13 @@
                     $.loading(false);
                 });
                 $('.menuTabs .page-tabs-content').append(str);
-                $.nfinetab.scrollToTab($('.menuTab.active'));
+                $.luccytab.scrollToTab($('.menuTab.active'));
             }
             return false;
         },
         scrollTabRight: function () {
             var marginLeftVal = Math.abs(parseInt($('.page-tabs-content').css('margin-left')));
-            var tabOuterWidth = $.nfinetab.calSumWidth($(".content-tabs").children().not(".menuTabs"));
+            var tabOuterWidth = $.luccytab.calSumWidth($(".content-tabs").children().not(".menuTabs"));
             var visibleWidth = $(".content-tabs").outerWidth(true) - tabOuterWidth;
             var scrollVal = 0;
             if ($(".page-tabs-content").width() < visibleWidth) {
@@ -168,7 +168,7 @@
                     offsetVal += $(tabElement).outerWidth(true);
                     tabElement = $(tabElement).next();
                 }
-                scrollVal = $.nfinetab.calSumWidth($(tabElement).prevAll());
+                scrollVal = $.luccytab.calSumWidth($(tabElement).prevAll());
                 if (scrollVal > 0) {
                     $('.page-tabs-content').animate({
                         marginLeft: 0 - scrollVal + 'px'
@@ -178,7 +178,7 @@
         },
         scrollTabLeft: function () {
             var marginLeftVal = Math.abs(parseInt($('.page-tabs-content').css('margin-left')));
-            var tabOuterWidth = $.nfinetab.calSumWidth($(".content-tabs").children().not(".menuTabs"));
+            var tabOuterWidth = $.luccytab.calSumWidth($(".content-tabs").children().not(".menuTabs"));
             var visibleWidth = $(".content-tabs").outerWidth(true) - tabOuterWidth;
             var scrollVal = 0;
             if ($(".page-tabs-content").width() < visibleWidth) {
@@ -191,12 +191,12 @@
                     tabElement = $(tabElement).next();
                 }
                 offsetVal = 0;
-                if ($.nfinetab.calSumWidth($(tabElement).prevAll()) > visibleWidth) {
+                if ($.luccytab.calSumWidth($(tabElement).prevAll()) > visibleWidth) {
                     while ((offsetVal + $(tabElement).outerWidth(true)) < (visibleWidth) && tabElement.length > 0) {
                         offsetVal += $(tabElement).outerWidth(true);
                         tabElement = $(tabElement).prev();
                     }
-                    scrollVal = $.nfinetab.calSumWidth($(tabElement).prevAll());
+                    scrollVal = $.luccytab.calSumWidth($(tabElement).prevAll());
                 }
             }
             $('.page-tabs-content').animate({
@@ -204,8 +204,8 @@
             }, "fast");
         },
         scrollToTab: function (element) {
-            var marginLeftVal = $.nfinetab.calSumWidth($(element).prevAll()), marginRightVal = $.nfinetab.calSumWidth($(element).nextAll());
-            var tabOuterWidth = $.nfinetab.calSumWidth($(".content-tabs").children().not(".menuTabs"));
+            var marginLeftVal = $.luccytab.calSumWidth($(element).prevAll()), marginRightVal = $.luccytab.calSumWidth($(element).nextAll());
+            var tabOuterWidth = $.luccytab.calSumWidth($(".content-tabs").children().not(".menuTabs"));
             var visibleWidth = $(".content-tabs").outerWidth(true) - tabOuterWidth;
             var scrollVal = 0;
             if ($(".page-tabs-content").outerWidth() < visibleWidth) {
@@ -234,12 +234,12 @@
             return width;
         },
         init: function () {
-            $('.menuItem').on('click', $.nfinetab.addTab);
-            $('.menuTabs').on('click', '.menuTab i', $.nfinetab.closeTab);
-            $('.menuTabs').on('click', '.menuTab', $.nfinetab.activeTab);
-            $('.tabLeft').on('click', $.nfinetab.scrollTabLeft);
-            $('.tabRight').on('click', $.nfinetab.scrollTabRight);
-            $('.tabReload').on('click', $.nfinetab.refreshTab);
+            $('.menuItem').on('click', $.luccytab.addTab);
+            $('.menuTabs').on('click', '.menuTab i', $.luccytab.closeTab);
+            $('.menuTabs').on('click', '.menuTab', $.luccytab.activeTab);
+            $('.tabLeft').on('click', $.luccytab.scrollTabLeft);
+            $('.tabRight').on('click', $.luccytab.scrollTabRight);
+            $('.tabReload').on('click', $.luccytab.refreshTab);
             $('.tabCloseCurrent').on('click', function () {
                 $('.page-tabs-content').find('.active i').trigger("click");
             });
@@ -254,7 +254,7 @@
                 });
                 $('.page-tabs-content').css("margin-left", "0");
             });
-            $('.tabCloseOther').on('click', $.nfinetab.closeOtherTabs);
+            $('.tabCloseOther').on('click', $.luccytab.closeOtherTabs);
             $('.fullscreen').on('click', function () {
                 if (!$(this).attr('fullscreen')) {
                     $(this).attr('fullscreen', 'true');
@@ -267,6 +267,6 @@
         }
     };
     $(function () {
-        $.nfinetab.init();
+        $.luccytab.init();
     });
 })(jQuery);

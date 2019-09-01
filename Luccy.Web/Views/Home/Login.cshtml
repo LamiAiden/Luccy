@@ -126,7 +126,7 @@
                     $("#switchCode").click(function () {
                         $("#imgcode").attr("src", "/Home/GetAuthCode?time=" + Math.random());
                     });
-                    var login_error = top.$.cookie('nfine_login_error');
+                    var login_error = top.$.cookie('luccy_login_error');
                     if (login_error != null) {
                         switch (login_error) {
                             case "overdue":
@@ -139,7 +139,7 @@
                                 $.login.formMessage("系统未知错误,请重新登录");
                                 break;
                         }
-                        top.$.cookie('nfine_login_error', '', { path: "/", expires: -1 });
+                        top.$.cookie('luccy_login_error', '', { path: "/", expires: -1 });
                     }
                     $("#login_button").click(function () {
                         $.login.loginClick();

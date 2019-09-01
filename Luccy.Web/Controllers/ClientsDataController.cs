@@ -49,6 +49,7 @@ namespace Luccy.Web.Controllers
             // var roleId = OperatorProvider.Provider.GetCurrent().RoleId;
             // return ToMenuJson(new RoleAuthorizeApp().GetMenuList(roleId), "0");
             return ToMenuJson(_sysModuleApp.GetModuleList(), "0");
+            //return "";
         }
         private string ToMenuJson(ModuleListOutputDto data, string parentId)
         {

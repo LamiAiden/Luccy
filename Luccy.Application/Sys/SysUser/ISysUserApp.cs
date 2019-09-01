@@ -11,7 +11,7 @@ namespace Luccy.Sys.SysUser
 {
     public interface ISysUserApp : IApplicationService
     {
-        UserDto CheckLogin(string name, string pwd);
+        UserDto CheckLogin(LoginInputDto inputDto);
         UserListOutputDto GetUserList(Pagination pagination, string keyword);
     }
 }

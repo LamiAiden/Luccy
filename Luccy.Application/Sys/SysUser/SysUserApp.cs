@@ -37,9 +37,9 @@ namespace Luccy.Sys.SysUser
         /// <param name="name"></param>
         /// <param name="pwd"></param>
         /// <returns></returns>
-        public UserDto CheckLogin(string name ,string pwd)
+        public UserDto CheckLogin(LoginInputDto inputDto)
         {
-            SysUserEntity entity= _sysUserRepository.GetAll().Where(b=>b.UserName.Equals(name)&&b.Password.Equals(pwd)).FirstOrDefault();
+            SysUserEntity entity = _sysUserRepository.GetAll().Where(b => b.UserName.Equals(inputDto.Name) && b.Password.Equals(inputDto.Pwd)).FirstOrDefault();
             UserDto dto = AutoMapper.Mapper.Map<UserDto>(entity);
             return dto;
         }

@@ -1200,3 +1200,173 @@ DEBUG 2019-08-31 15:05:14,829 [1    ] Abp.BackgroundJobs.BackgroundJobManager  -
 DEBUG 2019-08-31 15:05:14,942 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 0 classes define auto mapping attributes
 DEBUG 2019-08-31 15:05:15,284 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Luccy.Sys.SysUser.ISysUserApp' with service name 'app/sysUserApp'.
 DEBUG 2019-08-31 15:05:15,286 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Luccy.Sys.SysModule.ISysModuleApp' with service name 'app/sysModuleApp'.
+DEBUG 2019-09-01 15:17:26,560 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2019-09-01 15:17:26,629 [1    ] Abp.Modules.AbpModuleManager             - Found 13 ABP modules in total.
+DEBUG 2019-09-01 15:17:26,636 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Luccy.Web.LuccyWebModule, Luccy.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-01 15:17:26,638 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-01 15:17:26,638 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-01 15:17:26,638 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-01 15:17:26,639 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-01 15:17:26,639 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Luccy.LuccyDataModule, Luccy.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-01 15:17:26,639 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-01 15:17:26,639 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-01 15:17:26,640 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Luccy.LuccyCoreModule, Luccy.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-01 15:17:26,640 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Luccy.LuccyApplicationModule, Luccy.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-01 15:17:26,640 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-01 15:17:26,640 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Luccy.LuccyWebApiModule, Luccy.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-01 15:17:26,640 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-01 15:17:26,643 [1    ] Abp.Modules.AbpModuleManager             - 13 modules loaded.
+DEBUG 2019-09-01 15:17:27,011 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: Luccy.EntityFramework.LuccyDbContext, Luccy.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-01 15:17:28,841 [1    ] Abp.Localization.LocalizationManager     - Initializing 3 localization sources.
+DEBUG 2019-09-01 15:17:28,960 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2019-09-01 15:17:29,001 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2019-09-01 15:17:29,004 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Luccy
+DEBUG 2019-09-01 15:17:29,147 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2019-09-01 15:17:29,224 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 0 classes define auto mapping attributes
+DEBUG 2019-09-01 15:17:29,474 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Luccy.Sys.SysUser.ISysUserApp' with service name 'app/sysUserApp'.
+DEBUG 2019-09-01 15:17:29,475 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Luccy.Sys.SysModule.ISysModuleApp' with service name 'app/sysModuleApp'.
+DEBUG 2019-09-01 17:15:08,107 [54   ] Abp.Modules.AbpModuleManager             - Shutting down has been started
+DEBUG 2019-09-01 17:15:08,114 [54   ] Abp.BackgroundJobs.BackgroundJobManager  - Stop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2019-09-01 17:15:08,114 [54   ] Abp.BackgroundJobs.BackgroundJobManager  - WaitToStop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2019-09-01 17:15:08,115 [54   ] Abp.Modules.AbpModuleManager             - Shutting down completed.
+DEBUG 2019-09-01 17:15:17,671 [7    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2019-09-01 17:15:17,707 [7    ] Abp.Modules.AbpModuleManager             - Found 13 ABP modules in total.
+DEBUG 2019-09-01 17:15:17,716 [7    ] Abp.Modules.AbpModuleManager             - Loaded module: Luccy.Web.LuccyWebModule, Luccy.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-01 17:15:17,719 [7    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-01 17:15:17,719 [7    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-01 17:15:17,719 [7    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-01 17:15:17,719 [7    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-01 17:15:17,719 [7    ] Abp.Modules.AbpModuleManager             - Loaded module: Luccy.LuccyDataModule, Luccy.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-01 17:15:17,720 [7    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-01 17:15:17,720 [7    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-01 17:15:17,720 [7    ] Abp.Modules.AbpModuleManager             - Loaded module: Luccy.LuccyCoreModule, Luccy.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-01 17:15:17,720 [7    ] Abp.Modules.AbpModuleManager             - Loaded module: Luccy.LuccyApplicationModule, Luccy.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-01 17:15:17,721 [7    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-01 17:15:17,721 [7    ] Abp.Modules.AbpModuleManager             - Loaded module: Luccy.LuccyWebApiModule, Luccy.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-01 17:15:17,721 [7    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-01 17:15:17,724 [7    ] Abp.Modules.AbpModuleManager             - 13 modules loaded.
+DEBUG 2019-09-01 17:15:18,093 [7    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: Luccy.EntityFramework.LuccyDbContext, Luccy.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-01 17:15:19,274 [7    ] Abp.Localization.LocalizationManager     - Initializing 3 localization sources.
+DEBUG 2019-09-01 17:15:19,326 [7    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2019-09-01 17:15:19,372 [7    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2019-09-01 17:15:19,421 [7    ] Abp.Localization.LocalizationManager     - Initialized localization source: Luccy
+DEBUG 2019-09-01 17:15:19,550 [7    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2019-09-01 17:15:19,622 [7    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 0 classes define auto mapping attributes
+DEBUG 2019-09-01 17:15:19,860 [7    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Luccy.Sys.SysUser.ISysUserApp' with service name 'app/sysUserApp'.
+DEBUG 2019-09-01 17:15:19,862 [7    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Luccy.Sys.SysModule.ISysModuleApp' with service name 'app/sysModuleApp'.
+DEBUG 2019-09-01 21:49:59,645 [42   ] Abp.Modules.AbpModuleManager             - Shutting down has been started
+DEBUG 2019-09-01 21:49:59,659 [42   ] Abp.BackgroundJobs.BackgroundJobManager  - Stop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2019-09-01 21:49:59,661 [42   ] Abp.BackgroundJobs.BackgroundJobManager  - WaitToStop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2019-09-01 21:49:59,661 [42   ] Abp.Modules.AbpModuleManager             - Shutting down completed.
+DEBUG 2019-09-01 21:50:09,675 [79   ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2019-09-01 21:50:09,712 [79   ] Abp.Modules.AbpModuleManager             - Found 13 ABP modules in total.
+DEBUG 2019-09-01 21:50:09,718 [79   ] Abp.Modules.AbpModuleManager             - Loaded module: Luccy.Web.LuccyWebModule, Luccy.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-01 21:50:09,720 [79   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-01 21:50:09,721 [79   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-01 21:50:09,721 [79   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-01 21:50:09,721 [79   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-01 21:50:09,721 [79   ] Abp.Modules.AbpModuleManager             - Loaded module: Luccy.LuccyDataModule, Luccy.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-01 21:50:09,722 [79   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-01 21:50:09,722 [79   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-01 21:50:09,722 [79   ] Abp.Modules.AbpModuleManager             - Loaded module: Luccy.LuccyCoreModule, Luccy.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-01 21:50:09,722 [79   ] Abp.Modules.AbpModuleManager             - Loaded module: Luccy.LuccyApplicationModule, Luccy.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-01 21:50:09,722 [79   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-01 21:50:09,723 [79   ] Abp.Modules.AbpModuleManager             - Loaded module: Luccy.LuccyWebApiModule, Luccy.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-01 21:50:09,723 [79   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-01 21:50:09,726 [79   ] Abp.Modules.AbpModuleManager             - 13 modules loaded.
+DEBUG 2019-09-01 21:50:10,062 [79   ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: Luccy.EntityFramework.LuccyDbContext, Luccy.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-01 21:50:11,378 [79   ] Abp.Localization.LocalizationManager     - Initializing 3 localization sources.
+DEBUG 2019-09-01 21:50:11,434 [79   ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2019-09-01 21:50:11,496 [79   ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2019-09-01 21:50:11,541 [79   ] Abp.Localization.LocalizationManager     - Initialized localization source: Luccy
+DEBUG 2019-09-01 21:50:11,683 [79   ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2019-09-01 21:50:11,744 [79   ] Abp.AutoMapper.AbpAutoMapperModule       - Found 0 classes define auto mapping attributes
+DEBUG 2019-09-01 21:50:12,004 [79   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Luccy.Sys.SysUser.ISysUserApp' with service name 'app/sysUserApp'.
+DEBUG 2019-09-01 21:50:12,006 [79   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Luccy.Sys.SysModule.ISysModuleApp' with service name 'app/sysModuleApp'.
+DEBUG 2019-09-01 21:52:29,444 [73   ] Abp.Modules.AbpModuleManager             - Shutting down has been started
+DEBUG 2019-09-01 21:52:29,445 [73   ] Abp.BackgroundJobs.BackgroundJobManager  - Stop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2019-09-01 21:52:29,446 [73   ] Abp.BackgroundJobs.BackgroundJobManager  - WaitToStop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2019-09-01 21:52:29,446 [73   ] Abp.Modules.AbpModuleManager             - Shutting down completed.
+DEBUG 2019-09-01 21:52:35,181 [81   ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2019-09-01 21:52:35,196 [81   ] Abp.Modules.AbpModuleManager             - Found 13 ABP modules in total.
+DEBUG 2019-09-01 21:52:35,203 [81   ] Abp.Modules.AbpModuleManager             - Loaded module: Luccy.Web.LuccyWebModule, Luccy.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-01 21:52:35,205 [81   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-01 21:52:35,205 [81   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-01 21:52:35,205 [81   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-01 21:52:35,206 [81   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-01 21:52:35,206 [81   ] Abp.Modules.AbpModuleManager             - Loaded module: Luccy.LuccyDataModule, Luccy.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-01 21:52:35,206 [81   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-01 21:52:35,206 [81   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-01 21:52:35,206 [81   ] Abp.Modules.AbpModuleManager             - Loaded module: Luccy.LuccyCoreModule, Luccy.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-01 21:52:35,207 [81   ] Abp.Modules.AbpModuleManager             - Loaded module: Luccy.LuccyApplicationModule, Luccy.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-01 21:52:35,207 [81   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-01 21:52:35,207 [81   ] Abp.Modules.AbpModuleManager             - Loaded module: Luccy.LuccyWebApiModule, Luccy.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-01 21:52:35,207 [81   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-01 21:52:35,210 [81   ] Abp.Modules.AbpModuleManager             - 13 modules loaded.
+DEBUG 2019-09-01 21:52:35,531 [81   ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: Luccy.EntityFramework.LuccyDbContext, Luccy.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-01 21:52:36,702 [81   ] Abp.Localization.LocalizationManager     - Initializing 3 localization sources.
+DEBUG 2019-09-01 21:52:36,754 [81   ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2019-09-01 21:52:36,794 [81   ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2019-09-01 21:52:36,797 [81   ] Abp.Localization.LocalizationManager     - Initialized localization source: Luccy
+DEBUG 2019-09-01 21:52:36,925 [81   ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2019-09-01 21:52:36,979 [81   ] Abp.AutoMapper.AbpAutoMapperModule       - Found 0 classes define auto mapping attributes
+DEBUG 2019-09-01 21:52:37,177 [81   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Luccy.Sys.SysUser.ISysUserApp' with service name 'app/sysUserApp'.
+DEBUG 2019-09-01 21:52:37,179 [81   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Luccy.Sys.SysModule.ISysModuleApp' with service name 'app/sysModuleApp'.
+DEBUG 2019-09-01 21:54:06,809 [42   ] Abp.Modules.AbpModuleManager             - Shutting down has been started
+DEBUG 2019-09-01 21:54:06,810 [42   ] Abp.BackgroundJobs.BackgroundJobManager  - Stop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2019-09-01 21:54:06,811 [42   ] Abp.BackgroundJobs.BackgroundJobManager  - WaitToStop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2019-09-01 21:54:06,811 [42   ] Abp.Modules.AbpModuleManager             - Shutting down completed.
+DEBUG 2019-09-01 21:54:15,281 [81   ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2019-09-01 21:54:15,298 [81   ] Abp.Modules.AbpModuleManager             - Found 13 ABP modules in total.
+DEBUG 2019-09-01 21:54:15,307 [81   ] Abp.Modules.AbpModuleManager             - Loaded module: Luccy.Web.LuccyWebModule, Luccy.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-01 21:54:15,309 [81   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-01 21:54:15,309 [81   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-01 21:54:15,309 [81   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-01 21:54:15,309 [81   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-01 21:54:15,310 [81   ] Abp.Modules.AbpModuleManager             - Loaded module: Luccy.LuccyDataModule, Luccy.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-01 21:54:15,310 [81   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-01 21:54:15,310 [81   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-01 21:54:15,311 [81   ] Abp.Modules.AbpModuleManager             - Loaded module: Luccy.LuccyCoreModule, Luccy.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-01 21:54:15,311 [81   ] Abp.Modules.AbpModuleManager             - Loaded module: Luccy.LuccyApplicationModule, Luccy.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-01 21:54:15,311 [81   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-01 21:54:15,311 [81   ] Abp.Modules.AbpModuleManager             - Loaded module: Luccy.LuccyWebApiModule, Luccy.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-01 21:54:15,311 [81   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-01 21:54:15,315 [81   ] Abp.Modules.AbpModuleManager             - 13 modules loaded.
+DEBUG 2019-09-01 21:54:15,635 [81   ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: Luccy.EntityFramework.LuccyDbContext, Luccy.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-01 21:54:16,971 [81   ] Abp.Localization.LocalizationManager     - Initializing 3 localization sources.
+DEBUG 2019-09-01 21:54:17,027 [81   ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2019-09-01 21:54:17,069 [81   ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2019-09-01 21:54:17,071 [81   ] Abp.Localization.LocalizationManager     - Initialized localization source: Luccy
+DEBUG 2019-09-01 21:54:17,218 [81   ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2019-09-01 21:54:17,290 [81   ] Abp.AutoMapper.AbpAutoMapperModule       - Found 0 classes define auto mapping attributes
+DEBUG 2019-09-01 21:54:17,567 [81   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Luccy.Sys.SysUser.ISysUserApp' with service name 'app/sysUserApp'.
+DEBUG 2019-09-01 21:54:17,568 [81   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Luccy.Sys.SysModule.ISysModuleApp' with service name 'app/sysModuleApp'.
+DEBUG 2019-09-01 22:02:28,648 [82   ] Abp.Modules.AbpModuleManager             - Shutting down has been started
+DEBUG 2019-09-01 22:02:28,649 [82   ] Abp.BackgroundJobs.BackgroundJobManager  - Stop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2019-09-01 22:02:28,650 [82   ] Abp.BackgroundJobs.BackgroundJobManager  - WaitToStop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2019-09-01 22:02:28,650 [82   ] Abp.Modules.AbpModuleManager             - Shutting down completed.
+DEBUG 2019-09-01 22:02:36,126 [81   ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2019-09-01 22:02:36,143 [81   ] Abp.Modules.AbpModuleManager             - Found 13 ABP modules in total.
+DEBUG 2019-09-01 22:02:36,149 [81   ] Abp.Modules.AbpModuleManager             - Loaded module: Luccy.Web.LuccyWebModule, Luccy.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-01 22:02:36,153 [81   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-01 22:02:36,153 [81   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-01 22:02:36,153 [81   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-01 22:02:36,154 [81   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-01 22:02:36,154 [81   ] Abp.Modules.AbpModuleManager             - Loaded module: Luccy.LuccyDataModule, Luccy.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-01 22:02:36,154 [81   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-01 22:02:36,154 [81   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-01 22:02:36,154 [81   ] Abp.Modules.AbpModuleManager             - Loaded module: Luccy.LuccyCoreModule, Luccy.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-01 22:02:36,155 [81   ] Abp.Modules.AbpModuleManager             - Loaded module: Luccy.LuccyApplicationModule, Luccy.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-01 22:02:36,155 [81   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-01 22:02:36,155 [81   ] Abp.Modules.AbpModuleManager             - Loaded module: Luccy.LuccyWebApiModule, Luccy.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-01 22:02:36,155 [81   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-01 22:02:36,159 [81   ] Abp.Modules.AbpModuleManager             - 13 modules loaded.
+DEBUG 2019-09-01 22:02:36,643 [81   ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: Luccy.EntityFramework.LuccyDbContext, Luccy.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2019-09-01 22:02:38,242 [81   ] Abp.Localization.LocalizationManager     - Initializing 3 localization sources.
+DEBUG 2019-09-01 22:02:38,295 [81   ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2019-09-01 22:02:38,343 [81   ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2019-09-01 22:02:38,345 [81   ] Abp.Localization.LocalizationManager     - Initialized localization source: Luccy
+DEBUG 2019-09-01 22:02:38,493 [81   ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2019-09-01 22:02:38,564 [81   ] Abp.AutoMapper.AbpAutoMapperModule       - Found 0 classes define auto mapping attributes
+DEBUG 2019-09-01 22:02:38,793 [81   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Luccy.Sys.SysUser.ISysUserApp' with service name 'app/sysUserApp'.
+DEBUG 2019-09-01 22:02:38,795 [81   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'Luccy.Sys.SysModule.ISysModuleApp' with service name 'app/sysModuleApp'.

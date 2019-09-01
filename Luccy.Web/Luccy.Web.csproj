@@ -887,7 +887,6 @@
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Sys\Models\" />
     <Folder Include="Areas\Sys\Views\Shared\" />
-    <Folder Include="Views\ClientsData\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />

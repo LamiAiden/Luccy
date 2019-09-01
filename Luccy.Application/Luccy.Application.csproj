@@ -191,6 +191,7 @@
     <Compile Include="Sys\SysModule\Dto\SearchModuleInputDto.cs" />
     <Compile Include="Sys\SysModule\ISysModuleApp.cs" />
     <Compile Include="Sys\SysModule\SysModuleApp.cs" />
+    <Compile Include="Sys\SysUser\Dto\LoginInputDto.cs" />
     <Compile Include="Sys\SysUser\Dto\UserListOutputDto.cs" />
     <Compile Include="Sys\SysUser\ISysUserApp.cs" />
     <Compile Include="Sys\SysUser\SysUserApp.cs" />

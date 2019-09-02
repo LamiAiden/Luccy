@@ -193,12 +193,18 @@
   <ItemGroup>
     <Compile Include="EntityFramework\LuccyDbContext.cs" />
     <Compile Include="EntityFramework\Repositories\LuccyRepositoryBase.cs" />
+    <Compile Include="EntityFramework\Repositories\Sys\SysRightOperateRepository.cs" />
+    <Compile Include="EntityFramework\Repositories\Sys\SysRightRepository.cs" />
     <Compile Include="EntityFramework\Repositories\Sys\SysModuleOperateRepository.cs" />
     <Compile Include="EntityFramework\Repositories\Sys\SysModuleRepository.cs" />
+    <Compile Include="EntityFramework\Repositories\Sys\SysRole2UserRepository.cs" />
     <Compile Include="EntityFramework\Repositories\Sys\SysRoleRepository.cs" />
     <Compile Include="EntityFramework\Repositories\Sys\SysUserRepository.cs" />
     <Compile Include="Mapping\Sys\SysModuleMap.cs" />
     <Compile Include="Mapping\Sys\SysModuleOperateMap.cs" />
+    <Compile Include="Mapping\Sys\SysRightMap.cs" />
+    <Compile Include="Mapping\Sys\SysRightOperateMap.cs" />
+    <Compile Include="Mapping\Sys\SysRole2UserMap.cs" />
     <Compile Include="Mapping\Sys\SysRoleMap.cs" />
     <Compile Include="Mapping\Sys\SysUserMap.cs" />
     <Compile Include="Migrations\Configuration.cs" />

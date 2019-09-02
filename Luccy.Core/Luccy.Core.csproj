@@ -183,10 +183,16 @@
     <Compile Include="CommonModel\UserInfo.cs" />
     <Compile Include="Entity\Sys\SysModuleEntity.cs" />
     <Compile Include="Entity\Sys\SysModuleOperateEntity.cs" />
+    <Compile Include="Entity\Sys\SysRightEntity.cs" />
+    <Compile Include="Entity\Sys\SysRightOperateEntity.cs" />
+    <Compile Include="Entity\Sys\SysRole2UserEntity.cs" />
     <Compile Include="Entity\Sys\SysRoleEntity.cs" />
     <Compile Include="Entity\Sys\SysUserEntity.cs" />
     <Compile Include="IRepository\Sys\ISysModuleOperateRepository.cs" />
     <Compile Include="IRepository\Sys\ISysModuleRepository.cs" />
+    <Compile Include="IRepository\Sys\ISysRightOperateRepository.cs" />
+    <Compile Include="IRepository\Sys\ISysRightRepository.cs" />
+    <Compile Include="IRepository\Sys\ISysRole2UserRepository.cs" />
     <Compile Include="IRepository\Sys\ISysRoleRepository.cs" />
     <Compile Include="IRepository\Sys\ISysUserRepository.cs" />
     <Compile Include="LuccyConsts.cs" />

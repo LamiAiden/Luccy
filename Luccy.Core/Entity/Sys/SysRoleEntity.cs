@@ -7,10 +7,13 @@ using System.Threading.Tasks;
 
 namespace Luccy.Entity.Sys
 {
+    /// <summary>
+    /// 用户组表
+    /// </summary>
     public  class SysRoleEntity: Abp.Domain.Entities.Entity<string>
     {
         [Display(Name = "ID")]
-        public string Id { get; set; }
+        public override string Id { get; set; }
 
         [Display(Name = "角色名称")]
         public string Name { get; set; }

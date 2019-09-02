@@ -196,6 +196,13 @@
     <Compile Include="Sys\SysModule\Dto\SearchModuleInputDto.cs" />
     <Compile Include="Sys\SysModule\ISysModuleApp.cs" />
     <Compile Include="Sys\SysModule\SysModuleApp.cs" />
+    <Compile Include="Sys\SysRightOperate.cs" />
+    <Compile Include="Sys\SysRightOperate\ISysRightOperateApp.cs" />
+    <Compile Include="Sys\SysRightOperate\SysRightOperateApp.cs" />
+    <Compile Include="Sys\SysRight\ISysRightApp.cs" />
+    <Compile Include="Sys\SysRight\SysRightApp.cs" />
+    <Compile Include="Sys\SysRole2User\ISysRole2UserApp.cs" />
+    <Compile Include="Sys\SysRole2User\SysRole2UserApp.cs" />
     <Compile Include="Sys\SysRole\Dto\RoleDto.cs" />
     <Compile Include="Sys\SysRole\Dto\RoleOutputDto.cs" />
     <Compile Include="Sys\SysRole\Dto\SearchRoleInputDto.cs" />
@@ -217,7 +224,11 @@
       <Name>Luccy.Core</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Sys\SysRightOperate\Dto\" />
+    <Folder Include="Sys\SysRight\Dto\" />
+    <Folder Include="Sys\SysRole2User\Dto\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

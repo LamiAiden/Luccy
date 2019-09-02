@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace Luccy.Entity.Sys
 {
+    /// <summary>
+    /// 用户表
+    /// </summary>
     public class SysUserEntity:Abp.Domain.Entities.Entity<string>
     {
         [Display(Name = "Id")]

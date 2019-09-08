@@ -675,6 +675,7 @@
     <Content Include="Content\js\jqgrid\jqgrid.min.js" />
     <Content Include="Content\js\jqprint\jquery.jqprint-0.3.js" />
     <Content Include="Content\js\jqprint\jquery.jqprint.css" />
+    <Content Include="Content\js\jquery-3.3.1.min.js" />
     <Content Include="Content\js\jquery-ui\images\calendar.gif" />
     <Content Include="Content\js\jquery-ui\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\js\jquery-ui\images\ui-bg_flat_75_ffffff_40x100.png" />
@@ -833,6 +834,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Sys\Controllers\SysModuleController.cs" />
     <Compile Include="Areas\Sys\Controllers\SysModuleOperateController.cs" />
+    <Compile Include="Areas\Sys\Controllers\SysRightController.cs" />
     <Compile Include="Areas\Sys\Controllers\SysRoleController.cs" />
     <Compile Include="Areas\Sys\Controllers\SysUserController.cs" />
     <Compile Include="Areas\Sys\SysAreaRegistration.cs" />
@@ -860,6 +862,8 @@
     <Content Include="Areas\Sys\Views\SysModule\Index.cshtml" />
     <Content Include="Areas\Sys\Views\SysModuleOperate\Index.cshtml" />
     <Content Include="Areas\Sys\Views\SysRole\Index.cshtml" />
+    <Content Include="Areas\Sys\Views\SysRight\Index.cshtml" />
+    <Content Include="Areas\Sys\Views\SysUser\Form.cshtml" />
     <None Include="Views\Shared\_Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

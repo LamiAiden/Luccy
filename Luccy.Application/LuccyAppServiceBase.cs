@@ -1,4 +1,5 @@
 ﻿using Abp.Application.Services;
+using Luccy.CommonModel;
 
 namespace Luccy
 {

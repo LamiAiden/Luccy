@@ -196,7 +196,6 @@
     <Compile Include="Sys\SysModule\Dto\SearchModuleInputDto.cs" />
     <Compile Include="Sys\SysModule\ISysModuleApp.cs" />
     <Compile Include="Sys\SysModule\SysModuleApp.cs" />
-    <Compile Include="Sys\SysRightOperate.cs" />
     <Compile Include="Sys\SysRightOperate\ISysRightOperateApp.cs" />
     <Compile Include="Sys\SysRightOperate\SysRightOperateApp.cs" />
     <Compile Include="Sys\SysRight\ISysRightApp.cs" />
@@ -209,6 +208,8 @@
     <Compile Include="Sys\SysRole\ISysRoleApp.cs" />
     <Compile Include="Sys\SysRole\SysRoleApp.cs" />
     <Compile Include="Sys\SysUser\Dto\LoginInputDto.cs" />
+    <Compile Include="Sys\SysUser\Dto\UserDeleteInputDto.cs" />
+    <Compile Include="Sys\SysUser\Dto\UserInputDto.cs" />
     <Compile Include="Sys\SysUser\Dto\UserOutputDto.cs" />
     <Compile Include="Sys\SysUser\ISysUserApp.cs" />
     <Compile Include="Sys\SysUser\SysUserApp.cs" />
@@ -219,6 +220,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Luccy.Common\Luccy.Common.csproj">
+      <Project>{a229a6ad-5e34-40c0-820e-f61b2fb8ecd0}</Project>
+      <Name>Luccy.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Luccy.Core\Luccy.Core.csproj">
       <Project>{17298ea0-af73-4f30-b6f1-2066100d7d74}</Project>
       <Name>Luccy.Core</Name>

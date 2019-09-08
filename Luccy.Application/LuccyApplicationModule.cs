@@ -23,7 +23,9 @@ namespace Luccy
                 config.CreateMap<ModuleDto, SysModuleEntity>();
 
                 config.CreateMap<SysUserEntity,UserDto>();
-                config.CreateMap<UserDto, SysUserEntity>();
+                config.CreateMap<UserInputDto, SysUserEntity>();
+                
+
             });
         }
     }

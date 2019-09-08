@@ -59,12 +59,11 @@ namespace Luccy.Web.Controllers
                     info.UserID = userDto.Id;
                     info.UserName = userDto.UserName;
                     FormsAuthenticationTicket authTicket = new FormsAuthenticationTicket
-                    (1, JsonConvert.SerializeObject(info), DateTime.Now, DateTime.Now.AddMinutes(20), false, "role");
+                    (1, JsonConvert.SerializeObject(info), DateTime.Now, DateTime.Now.AddMinutes(20), true, "role");
                     string encryptedTicket = FormsAuthentication.Encrypt(authTicket);
                     HttpCookie authCookie = new HttpCookie(FormsAuthentication.FormsCookieName, encryptedTicket);
                     System.Web.HttpContext.Current.Response.Cookies.Add(authCookie);
-                }
-               
+                }          
                 return Json(new AjaxResult { state = ResultType.success.ToString(), message = "登录成功。" });
             }
             catch (Exception ex)

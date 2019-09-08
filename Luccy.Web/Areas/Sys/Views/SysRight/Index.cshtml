@@ -1,0 +1,100 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script>
+    $(function () {
+        $('#layout').layout();
+        $('#layout1').layout();
+        gridList();
+        treeView();
+        gridListButton(); 
+    });
+    function gridList() {
+       var $gridList = $("#gridList");
+        $gridList.dataGrid({
+            url: "@Url.Action("GetTreeGridJson", "SysRole")",
+            height: $(window).height()-96,
+            colModel: [
+                { label: "主键", name: "Id", hidden: true, key: true },
+                { label: '角色名称', name: 'Name', width: 110, align: 'left' }
+            ],
+            pager: "#gridPager",
+            sortname: 'CreateTime desc',
+            viewrecords: false
+        });
+    }
+
+     function treeView() {
+        $("#itemTree").treeview({
+            url: "@Url.Action("GetTreeViewJson", "SysModule")",
+            onnodeclick: function (item) {
+                //$("#txt_keyword").val('')
+                $("#gridListButton").jqGrid('setGridParam', {
+                    url: "@Url.Action("GetGridJson", "SysModuleOperate")",
+                    postData: { itemId: $("#itemTree").getCurrentNode().id },
+                }).trigger('reloadGrid');
+            }
+        });
+    }
+
+    function gridListButton() {
+        var $gridList = $("#gridListButton");
+        $gridList.dataGrid({
+            height: $(window).height() - 145,
+            fitColumns: true,
+            colModel: [
+                { label: "主键", name: "Id", hidden: true, key: true },
+                { label: '名称', name: 'Name', width: 250, align: 'left' },
+                { label: '操作码', name: 'KeyCode', width: 150, align: 'left' },
+                { label: '排序', name: 'Sort', width: 80, sortable: true },
+                {
+                    label: '操作权限', name: 'IsValid', align: 'center', width: 80, formatter: function (value) {
+                        if (value) {
+                            return "<input type='checkbox' checked='checked' value=" + value + " />";
+                        } else {
+                            return "<input type='checkbox' value=" + value + " />";
+                        }
+                    }
+                 }
+            ]
+            , pager: "#gridPagerBytton",
+            sortname: 'CreateTime desc',
+            viewrecords: false
+        });
+    }
+   
+</script>
+<div class="ui-layout" id="layout" style="height: 100%; width: 100%;">
+    <div class="ui-layout-west">
+        <div class="gridPanel">
+            <table id="gridList"></table>
+            <div id="gridPager"></div>
+        </div>
+    </div>
+    <div class="ui-layout-center">
+        <div class="ui-layout" id="layout1" style="height: 100%; width: 100%;">
+            <div class="ui-layout-west">
+                <div id="itemTree"></div>
+            </div>
+            <div class="ui-layout-center">
+                <div class="topPanel">
+                    <div class="toolbar">
+                        <div class="btn-group">
+                            <a class="btn btn-primary" onclick="$.reload()"><span class="glyphicon glyphicon-refresh"></span></a>
+                        </div>
+                        <div class="btn-group">
+                            <a id="NF-add" authorize="yes" class="btn btn-primary dropdown-text" onclick="btn_add()"><i class="fa fa-plus"></i>新建字典</a>
+                        </div>
+                    </div>
+                </div>
+                <table id="gridListButton"></table>
+                <div id="gridPagerBytton"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

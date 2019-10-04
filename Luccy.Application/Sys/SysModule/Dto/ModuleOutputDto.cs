@@ -12,5 +12,7 @@ namespace Luccy.Sys.SysModule.Dto
         public List<ModuleDto> ModuleDtoList { get; set; }
         public string TreeGridJson { get; set; }
         public string TreeViewJson { get; set; }
+        public string TreeSelectJson { get; set; }
+        public ModuleDto UserDtoSingle { get; set; }
     }
 }

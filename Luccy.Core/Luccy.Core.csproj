@@ -178,7 +178,9 @@
   <ItemGroup>
     <Compile Include="CommonModel\AjaxResult.cs" />
     <Compile Include="CommonModel\Pagination.cs" />
+    <Compile Include="CommonModel\PermModel.cs" />
     <Compile Include="CommonModel\TreeGridModel.cs" />
+    <Compile Include="CommonModel\TreeSelectModel.cs" />
     <Compile Include="CommonModel\TreeViewModel.cs" />
     <Compile Include="CommonModel\UserInfo.cs" />
     <Compile Include="Entity\Sys\SysModuleEntity.cs" />

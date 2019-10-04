@@ -1,4 +1,5 @@
-﻿using Luccy.Entity.Sys;
+﻿using Luccy.CommonModel;
+using Luccy.Entity.Sys;
 using Luccy.IRepository.Sys;
 using Luccy.Sys.SysRole.Dto;
 using System;
@@ -26,6 +27,51 @@ namespace Luccy.Sys.SysRole
             return outputDto;
         }
 
+        public RoleOutputDto GetForm(string keyword)
+        {
+            SysRoleEntity userEntityList = _sysRoleRepository.Get(keyword);
+            RoleDto RoleDtoList = AutoMapper.Mapper.Map<RoleDto>(userEntityList);
+            RoleOutputDto outputDto = new RoleOutputDto();
+            outputDto.RoleDtoSingle = RoleDtoList;
+            return outputDto;
+        }
+
+        public void SubmitForm(RoleSubmitInputDto roleInputDto, UserInfo userinfo)
+        {
+            if (!string.IsNullOrEmpty(roleInputDto.Id)) //更新
+            {
+                SysRoleEntity entity = _sysRoleRepository.Get(roleInputDto.Id);
+                entity.Name = roleInputDto.Name;
+                entity.Description = roleInputDto.Description;
+                entity.CreatePerson = userinfo.UserID;
+                entity.CreateTime = DateTime.Now;
+                _sysRoleRepository.Update(entity);
+            }
+            else
+            {
+                SysRoleEntity entity = AutoMapper.Mapper.Map<SysRoleEntity>(roleInputDto);
+                entity.Id = Guid.NewGuid().ToString();
+                entity.CreatePerson = userinfo.UserID;
+                entity.CreateTime = DateTime.Now;
+                _sysRoleRepository.Insert(entity);
+            }
+        }
+
+        public void DeleteForm(RoleDeleteInputDto dto)
+        {
+            if (!string.IsNullOrEmpty(dto.Id))
+                _sysRoleRepository.Delete(dto.Id);
+        }
+
+        public RoleOutputDto GetList()
+        {
+            var query = _sysRoleRepository.GetAll();
+            RoleOutputDto output = new RoleOutputDto();
+            List<RoleDto> roleDtoList = AutoMapper.Mapper.Map<List<RoleDto>>(query.ToList());
+            output.RoleDtoList = roleDtoList;
+
+            return output;
+        }
 
     }
 }

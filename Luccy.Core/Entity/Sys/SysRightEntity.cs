@@ -14,11 +14,11 @@ namespace Luccy.Entity.Sys
     {
         [Display(Name = "ID")]
         public override string Id { get; set; }
-        [Display(Name = "ModuleID")]
-        public  string ModuleId { get; set; }
+        [Display(Name = "ModuleOperateId")]
+        public  string ModuleOperateId { get; set; }
         [Display(Name = "RoleId")]
         public  string RoleId { get; set; }
-        [Display(Name = "是否有效")]
-        public bool RightFlag { get; set; }
+        [Display(Name = "IsValid")]
+        public bool IsValid { get; set; }
     }
 }

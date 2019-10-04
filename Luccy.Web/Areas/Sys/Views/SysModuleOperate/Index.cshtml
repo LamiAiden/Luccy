@@ -1,9 +1,11 @@
-﻿
+﻿@using Luccy.CommonModel;
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
+@{
+    List<PermModel> perm = ViewBag.permission as List<PermModel>;
+}
 <script>
     $(function () {
         $('#layout').layout();
@@ -16,8 +18,8 @@
             onnodeclick: function (item) {
                 //$("#txt_keyword").val('')
                 $("#gridList").jqGrid('setGridParam', {
-                    url: "@Url.Action("GetGridJson", "SysModuleOperate")",
-                    postData: { itemId: $("#itemTree").getCurrentNode().id },
+                    url: "@Url.Action("GetMenuGridJson", "SysModuleOperate")",
+                    postData: { menuId: $("#itemTree").getCurrentNode().id },
                 }).trigger('reloadGrid');
             }
         });
@@ -52,8 +54,8 @@
         }
         $.modalOpen({
             id: "Form",
-            title: itemName + " 》新增字典",
-            url: "/SystemManage/ItemsData/Form?itemId=" + itemId,
+            title: itemName + " 》新增操作码",
+            url: "@Url.Action("Form","SysModuleOperate")"+"?itemId=" + itemId,
             width: "450px",
             height: "350px",
             callBack: function (iframeId) {
@@ -63,11 +65,11 @@
     }
     function btn_edit() {
         var itemName = $("#itemTree").getCurrentNode().text;
-        var keyValue = $("#gridList").jqGridRowValue().F_Id;
+        var keyValue = $("#gridList").jqGridRowValue().Id;
         $.modalOpen({
             id: "Form",
-            title: itemName + " 》修改字典",
-            url: "/SystemManage/ItemsData/Form?keyValue=" + keyValue,
+            title: itemName + " 》修改操作码",
+            url: "@Url.Action("Form","SysModuleOperate")"+"?keyValue=" + keyValue,
             width: "450px",
             height: "350px",
             callBack: function (iframeId) {
@@ -77,35 +79,35 @@
     }
     function btn_delete() {
         $.deleteForm({
-            url: "/SystemManage/ItemsData/DeleteForm",
-            param: { keyValue: $("#gridList").jqGridRowValue().F_Id },
+            url: "@Url.Action("DeleteForm", "SysModuleOperate")",
+            param: { Id: $("#gridList").jqGridRowValue().Id },
             success: function () {
                 $("#gridList").resetSelection();
                 $("#gridList").trigger("reloadGrid");
             }
         })
     }
-    function btn_details() {
-        var keyValue = $("#gridList").jqGridRowValue().F_Id;
-        $.modalOpen({
-            id: "Details",
-            title: "查看字典",
-            url: "/SystemManage/ItemsData/Details?keyValue=" + keyValue,
-            width: "450px",
-            height: "470px",
-            btn: null,
-        });
-    }
-    function btn_itemstype() {
-        $.modalOpen({
-            id: "ItemsType",
-            title: "字典分类",
-            url: "/SystemManage/ItemsType/Index",
-            width: "800px",
-            height: "550px",
-            btn: null,
-        });
-    }
+    //function btn_details() {
+    //    var keyValue = $("#gridList").jqGridRowValue().F_Id;
+    //    $.modalOpen({
+    //        id: "Details",
+    //        title: "查看字典",
+    //        url: "/SystemManage/ItemsData/Details?keyValue=" + keyValue,
+    //        width: "450px",
+    //        height: "470px",
+    //        btn: null,
+    //    });
+    //}
+    //function btn_itemstype() {
+    //    $.modalOpen({
+    //        id: "ItemsType",
+    //        title: "字典分类",
+    //        url: "/SystemManage/ItemsType/Index",
+    //        width: "800px",
+    //        height: "550px",
+    //        btn: null,
+    //    });
+    //}
 </script>
 <div class="ui-layout" id="layout" style="height: 100%; width: 100%;">
     <div class="ui-layout-west">
@@ -118,18 +120,13 @@
                     <a class="btn btn-primary" onclick="$.reload()"><span class="glyphicon glyphicon-refresh"></span></a>
                 </div>
                 <div class="btn-group">
-                    <a id="NF-add" authorize="yes" class="btn btn-primary dropdown-text" onclick="btn_add()"><i class="fa fa-plus"></i>新建字典</a>
-                    <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
-                    <ul class="dropdown-menu pull-right">
-                        <li><a id="NF-itemstype" authorize="yes" onclick="btn_itemstype()" href="javascript:void()">分类管理</a></li>
-                    </ul>
+                    @Html.ToolButton("btn btn-primary dropdown-text", "NF-add", "fa fa-plus", "新建操作码", perm, "Add", "btn_add()", true)
                 </div>
                 <div class="operate">
                     <ul class="nav nav-pills">
                         <li class="first">已选中<span>1</span>项</li>
-                        <li><a id="NF-edit" authorize="yes" onclick="btn_edit()"><i class="fa fa-pencil-square-o"></i>修改字典</a></li>
-                        <li><a id="NF-delete" authorize="yes" onclick="btn_delete()"><i class="fa fa-trash-o"></i>删除字典</a></li>
-                        <li><a id="NF-Details" authorize="yes" onclick="btn_details()"><i class="fa fa-search-plus"></i>查看字典</a></li>
+                        <li> @Html.ToolButton("", "NF-edit", "fa fa-pencil-square-o", "修改操作码", perm, "Edit", "btn_edit()", true)</li>
+                        <li> @Html.ToolButton("", "NF-delete", "fa fa-trash-o", "删除操作码", perm, "Delete", "btn_delete()", true)</li>
                     </ul>
                     <a href="javascript:;" class="close"></a>
                 </div>

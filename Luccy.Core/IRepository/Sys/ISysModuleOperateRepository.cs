@@ -1,4 +1,5 @@
 ﻿using Abp.Domain.Repositories;
+using Luccy.CommonModel;
 using Luccy.Core.CommonModel;
 using Luccy.Entity.Sys;
 using System;
@@ -12,5 +13,6 @@ namespace Luccy.IRepository.Sys
     public  interface ISysModuleOperateRepository: IRepository<SysModuleOperateEntity, string>
     {
         List<SysModuleOperateEntity> GetModuleOperateListByPage(Pagination pagination, string mid);
+        List<PermModel> GetPermissionByUserIdAndUrl(string userId, string Url);
     }
 }

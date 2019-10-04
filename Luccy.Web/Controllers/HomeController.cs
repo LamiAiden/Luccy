@@ -5,6 +5,8 @@ using Luccy.Common.Enum;
 using Luccy.Common.Utils;
 using Luccy.CommonModel;
 using Luccy.Core.CommonModel;
+using Luccy.Sys.SysModuleOperate;
+using Luccy.Sys.SysRight;
 using Luccy.Sys.SysUser;
 using Luccy.Sys.SysUser.Dto;
 using Newtonsoft.Json;
@@ -18,9 +20,13 @@ namespace Luccy.Web.Controllers
     public class HomeController : LuccyControllerBase
     {
         private ISysUserApp _sysUser;
-        public HomeController(ISysUserApp sysUser)
+        private ISysModuleOperateApp _sysModuleOperateApp;
+        private ISysRightApp _sysRightApp;
+        public HomeController(ISysUserApp sysUser, ISysModuleOperateApp sysModuleOperateApp, ISysRightApp sysRightApp):base(sysModuleOperateApp)
         {
             _sysUser = sysUser;
+            _sysModuleOperateApp = sysModuleOperateApp;
+            _sysRightApp = sysRightApp;
         }
         public ActionResult Index()
         {

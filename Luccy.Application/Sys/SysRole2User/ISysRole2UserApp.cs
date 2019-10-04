@@ -1,4 +1,5 @@
 ﻿using Abp.Application.Services;
+using Luccy.Sys.SysRole2User.Dto;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,5 +10,6 @@ namespace Luccy.Sys.SysRole2User
 {
     public interface ISysRole2UserApp:IApplicationService
     {
+        Role2UserOutputDto GetRole2UserByUserId(Role2UserInputDto inputDto);
     }
 }

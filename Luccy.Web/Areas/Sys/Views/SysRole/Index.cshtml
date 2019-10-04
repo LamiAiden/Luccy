@@ -1,7 +1,10 @@
-﻿
+﻿@using Luccy.CommonModel;
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Index.cshtml";
+}
+@{
+    List<PermModel> perm = ViewBag.permission as List<PermModel>;
 }
 <script>
     $(function () {
@@ -32,8 +35,8 @@
     function btn_add() {
         $.modalOpen({
             id: "Form",
-            title: "新增机构",
-            url: "/SystemManage/Organize/Form",
+            title: "新增用户组",
+            url:"@Url.Action("Form", "SysRole")",
             width: "700px",
             height: "520px",
             callBack: function (iframeId) {
@@ -42,11 +45,11 @@
         });
     }
     function btn_edit() {
-        var keyValue = $("#gridList").jqGridRowValue().F_Id;
+        var keyValue = $("#gridList").jqGridRowValue().Id;
         $.modalOpen({
             id: "Form",
-            title: "修改机构",
-            url: "/SystemManage/Organize/Form?keyValue=" + keyValue,
+            title: "修改用户组",
+            url: "@Url.Action("Form", "SysRole")"+"?keyValue=" + keyValue,
             width: "700px",
             height: "520px",
             callBack: function (iframeId) {
@@ -56,25 +59,25 @@
     }
     function btn_delete() {
         $.deleteForm({
-            url: "/SystemManage/Organize/DeleteForm",
-            param: { keyValue: $("#gridList").jqGridRowValue().F_Id },
+            url: "@Url.Action("DeleteForm", "SysRole")",
+            param: { keyValue: $("#gridList").jqGridRowValue().Id },
             success: function () {
                 $.currentWindow().$("#gridList").resetSelection();
                 $.currentWindow().$("#gridList").trigger("reloadGrid");
             }
         })
     }
-    function btn_details() {
-        var keyValue = $("#gridList").jqGridRowValue().F_Id;
-        $.modalOpen({
-            id: "Details",
-            title: "查看机构",
-            url: "/SystemManage/Organize/Details?keyValue=" + keyValue,
-            width: "700px",
-            height: "560px",
-            btn: null,
-        });
-    }
+    //function btn_details() {
+    //    var keyValue = $("#gridList").jqGridRowValue().F_Id;
+    //    $.modalOpen({
+    //        id: "Details",
+    //        title: "查看机构",
+    //        url: "/SystemManage/Organize/Details?keyValue=" + keyValue,
+    //        width: "700px",
+    //        height: "560px",
+    //        btn: null,
+    //    });
+    //}
 </script>
 
 <div class="topPanel">
@@ -83,14 +86,14 @@
             <a class="btn btn-primary" onclick="$.reload()"><span class="glyphicon glyphicon-refresh"></span></a>
         </div>
         <div class="btn-group">
-            <a id="NF-add" authorize="yes" class="btn btn-primary dropdown-text" onclick="btn_add()"><i class="fa fa-plus"></i>新建机构</a>
+            @Html.ToolButton("btn btn-primary dropdown-text", "NF-add", "fa fa-plus", "新建用户组", perm, "Add", "btn_add()", true)
         </div>
         <div class="operate">
             <ul class="nav nav-pills">
                 <li class="first">已选中<span>1</span>项</li>
-                <li><a id="NF-edit" authorize="yes" onclick="btn_edit()"><i class="fa fa-pencil-square-o"></i>修改机构</a></li>
-                <li><a id="NF-delete" authorize="yes" onclick="btn_delete()"><i class="fa fa-trash-o"></i>删除机构</a></li>
-                <li><a id="NF-Details" authorize="yes" onclick="btn_details()"><i class="fa fa-search-plus"></i>查看机构</a></li>
+                <li> @Html.ToolButton("", "NF-edit", "fa fa-pencil-square-o", "修改用户组", perm, "Edit", "btn_edit()", true)</li>
+                <li> @Html.ToolButton("", "NF-delete", "fa fa-trash-o", "删除用户组", perm, "Delete", "btn_delete()", true)</li>
+
             </ul>
             <a href="javascript:;" class="close"></a>
         </div>

@@ -832,6 +832,7 @@
     <Compile Include="App_Start\LuccyNavigationProvider.cs" />
     <Compile Include="App_Start\LuccyWebModule.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Areas\ExtendMvcHtml.cs" />
     <Compile Include="Areas\Sys\Controllers\SysModuleController.cs" />
     <Compile Include="Areas\Sys\Controllers\SysModuleOperateController.cs" />
     <Compile Include="Areas\Sys\Controllers\SysRightController.cs" />
@@ -864,6 +865,9 @@
     <Content Include="Areas\Sys\Views\SysRole\Index.cshtml" />
     <Content Include="Areas\Sys\Views\SysRight\Index.cshtml" />
     <Content Include="Areas\Sys\Views\SysUser\Form.cshtml" />
+    <Content Include="Areas\Sys\Views\SysModule\Form.cshtml" />
+    <Content Include="Areas\Sys\Views\SysModuleOperate\Form.cshtml" />
+    <Content Include="Areas\Sys\Views\SysRole\Form.cshtml" />
     <None Include="Views\Shared\_Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

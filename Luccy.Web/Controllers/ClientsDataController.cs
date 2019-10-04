@@ -1,6 +1,7 @@
 ﻿using Abp.Web.Models;
 using Luccy.Sys.SysModule;
 using Luccy.Sys.SysModule.Dto;
+using Luccy.Sys.SysModuleOperate;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -14,7 +15,7 @@ namespace Luccy.Web.Controllers
     public class ClientsDataController : LuccyControllerBase
     {
         private  ISysModuleApp _sysModuleApp;
-        public ClientsDataController(ISysModuleApp sysModuleApp)
+        public ClientsDataController(ISysModuleApp sysModuleApp,ISysModuleOperateApp sysModeleOperateApp):base(sysModeleOperateApp)
         {
             _sysModuleApp = sysModuleApp;
         }

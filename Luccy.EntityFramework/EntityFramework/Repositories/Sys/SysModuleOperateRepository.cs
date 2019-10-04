@@ -1,4 +1,5 @@
 ﻿using Abp.EntityFramework;
+using Luccy.CommonModel;
 using Luccy.Core.CommonModel;
 using Luccy.Entity.Sys;
 using Luccy.IRepository.Sys;
@@ -25,5 +26,22 @@ namespace Luccy.EntityFramework.Repositories.Sys
             }
             return FindList(expression, pagination);
         }
+
+        public List<PermModel> GetPermissionByUserIdAndUrl(string userId, string Url)
+        {
+            var db = GetDBContext();
+            var query = from o in db.SysModuleOperate
+                        join r in db.SysRight on o.Id equals r.ModuleOperateId
+                        join g in db.SysRole2User on r.RoleId equals g.SysRoleId
+                        join m in db.SysModule on o.ModuleId equals m.Id
+                        where m.Url == Url && g.SysUserId == userId&&r.IsValid==true
+                        select new PermModel
+                        {
+                           KeyCode= o.KeyCode,
+                           IsValid= r.IsValid
+                        };
+            return query.ToList();
+        }
+
     }
 }

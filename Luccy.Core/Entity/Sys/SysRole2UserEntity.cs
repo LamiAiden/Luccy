@@ -12,11 +12,9 @@ namespace Luccy.Entity.Sys
     /// </summary>
     public  class SysRole2UserEntity: Abp.Domain.Entities.Entity<string>
     {
-        [Display(Name = "ID")]
-        public override string Id { get; set; }
-        [Display(Name = "菜单ID")]
-        public  string ModuleId { get; set; }
+        [Display(Name = "用户ID")]
+        public  string SysUserId { get; set; }
         [Display(Name = "用户组")]
-        public  string RoleId { get; set; }
+        public  string SysRoleId { get; set; }
     }
 }

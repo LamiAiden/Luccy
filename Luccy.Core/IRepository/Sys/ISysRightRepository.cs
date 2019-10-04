@@ -10,5 +10,8 @@ namespace Luccy.IRepository.Sys
 {
     public interface ISysRightRepository  : IRepository<SysRightEntity, string>
     {
+        void SetRight(string rentityId, List<SysModuleOperateEntity> moentity);
+        List<SysRightEntity> GetAllRightByRIdAndMid(string roleId, string mId);
+
     }
 }

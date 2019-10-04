@@ -1,0 +1,116 @@
+﻿
+@{
+    ViewBag.Title = "Form";
+    Layout = "~/Views/Shared/_Form.cshtml";
+}
+
+<script>
+    var keyValue = $.request("keyValue");
+    $(function () {
+        initControl();
+
+        if (!!keyValue) {
+            $.ajax({
+                url:"@Url.Action("GetFormJson", "SysModule")",
+                data: { keyValue: keyValue },
+                dataType: "json",
+                async: true,
+                success: function (data) {
+                    $("#form1").formSerialize(data);
+                }
+            });
+        }
+    });
+    function initControl() {
+        $("#Id").val(keyValue);
+        $("#ParentId").bindSelect({
+            url: "@Url.Action("GetTreeSelectJson", "SysModule")",
+        });
+
+    }
+    function submitForm() {
+        if (!$('#form1').formValid()) {
+            return false;
+        }
+
+        $.submitForm({
+            url: "@Url.Action("SubmitForm", "SysModule")",
+            param: $("#form1").formSerialize(),
+            success: function () {
+                $.currentWindow().$("#gridList").trigger("reloadGrid");
+            }
+        })
+    }
+
+
+    function btn_delete() {
+        $.deleteForm({
+            url:"@Url.Action("DeleteForm", "SysModule")",
+            param: { keyValue: $("#gridList").jqGridRowValue().Id },
+            success: function () {
+                $.currentWindow().$("#gridList").trigger("reloadGrid");
+            }
+        })
+    }
+</script>
+<form id="form1">
+    <div style="margin-top: 10px; margin-left: 10px; margin-right: 10px;">
+        <ul class="nav nav-tabs">
+            <li class="active"><a href="#">基本信息</a></li>
+            @*<li ><a href="#">扩展信息</a></li>*@
+        </ul>
+        <div style="padding-top: 20px; margin-right: 30px;">
+            <table class="form">
+                <tr>
+                    <th class="formTitle">菜单名</th>
+                    <td class="formValue">
+                        <input id="Name" name="Name" type="text" class="form-control required" placeholder="请输入菜单名字" />
+                    </td>
+                    <th class="formTitle">菜单英文名</th>
+                    <td class="formValue">
+                        <input id="EnglishName" name="EnglishName" type="text" class="form-control " placeholder="菜单英文名" />
+                    </td>
+                </tr>
+                <tr>
+                    <th class="formTitle">父链接</th>
+                    <td>
+                        <select id="ParentId" name="ParentId" class="form-control required"></select>
+                    </td>
+                    <th class="formTitle">链接</th>
+                    <td class="formValue">
+                        <input id="Url" name="Url" type="text" class="form-control" />
+                    </td>
+                </tr>
+                <tr>
+                    <th class="formTitle">图标</th>
+                    <td class="formValue">
+                        <input id="Iconic" name="Iconic" type="text" class="form-control" />
+                    </td>
+                    <th class="formTitle">序号</th>
+                    <td class="formValue">
+                        <input id="Sort" name="Sort" type="text" class="form-control" />
+                      
+                    </td>
+                </tr>
+                <tr>
+                    <th class="formTitle">说明</th>
+                    <td class="formValue">
+                        <input id="Remark" name="Remark" type="text" class="form-control" />
+                    </td>
+                    <th class="formTitle">是否最后一个</th>
+                    <td class="formValue">
+                        <select id="IsLast" name="IsLast" class="form-control required">
+                            <option value="true">是</option>
+                            <option value="false">否</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <input type="hidden" id="Id" value="">
+</form>
+
+
+
+

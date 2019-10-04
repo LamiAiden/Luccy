@@ -9,5 +9,7 @@ namespace Luccy.Sys.SysRole.Dto
     public class RoleOutputDto
     {
        public  List<RoleDto> RoleDtoList { get; set; }
+
+       public RoleDto RoleDtoSingle { get; set; }
     }
 }

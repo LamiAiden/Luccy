@@ -19,5 +19,6 @@ namespace Luccy.Sys.SysModuleOperate.Dto
         [Required]
         public Pagination Pagination { get; set; }
         public string Mid { get; set; }
+        public string RoleId { get; set; }
     }
 }

@@ -18,5 +18,7 @@ namespace Luccy.Sys.SysUser.Dto
         public string PhoneNumber { get; set; }
 
         public string QQ { get; set; }
+
+        public string RoleId { get; set; }
     }
 }

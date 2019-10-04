@@ -22,6 +22,11 @@
     });
     function initControl() {
         $("#Id").val(keyValue);
+         $("#RoleId").bindSelect({
+             url: "@Url.Action("GetRoleJson", "SysUser")",
+             id: "Id",
+             text: "Name"
+        });
     }
     function submitForm() {
         if (!$('#form1').formValid()) {
@@ -75,6 +80,14 @@
                     <td class="formValue">
                         <input id="QQ" name="QQ" type="text" class="form-control"  />
                         @*<input id="QQ" name="QQ" type="text" class="form-control input-wdatepicker" onfocus="WdatePicker()" />*@
+                    </td>
+                </tr>
+                <tr>
+                    <th class="formTitle">角色</th>
+                    <td class="formValue">
+                        <select id="RoleId" name="RoleId" class="form-control required">
+                            <option value="">==请选择==</option>
+                        </select>
                     </td>
                 </tr>
             </table>

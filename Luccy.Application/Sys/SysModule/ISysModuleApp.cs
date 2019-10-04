@@ -1,4 +1,5 @@
 ﻿using Abp.Application.Services;
+using Luccy.CommonModel;
 using Luccy.Sys.SysModule.Dto;
 using System;
 using System.Collections.Generic;
@@ -13,5 +14,9 @@ namespace Luccy.Sys.SysModule
         ModuleOutputDto GetTreeGridList();
         ModuleOutputDto GetModuleList();
         ModuleOutputDto GetTreeViewList();
+        ModuleOutputDto GetForm(string keyword);
+        void SubmitForm(ModuleSumbitInputDto InputDto, UserInfo userinfo);
+        void DeleteForm(ModuleDeleteInputDto dto);
+        ModuleOutputDto GetTreeSelectJson();
     }
 }

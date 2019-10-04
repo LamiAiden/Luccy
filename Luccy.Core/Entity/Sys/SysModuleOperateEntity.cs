@@ -10,7 +10,7 @@ namespace Luccy.Entity.Sys
     public  class SysModuleOperateEntity: Abp.Domain.Entities.Entity<string>
     {
         [Display(Name = "ID")]
-        public string Id { get; set; }
+        public override string Id { get; set; }
         [Display(Name = "操作名称")]
         public string Name { get; set; }
         [Display(Name = "操作码")]

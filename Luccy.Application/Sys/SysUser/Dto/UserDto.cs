@@ -11,7 +11,7 @@ namespace Luccy.Sys.SysUser.Dto
         public  string Id { get; set; }
 
         public string UserName { get; set; }
-       
+        public string RoleId { get; set; }
         public string TrueName { get; set; }
        
         public string PhoneNumber { get; set; }

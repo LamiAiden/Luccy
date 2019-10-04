@@ -12,8 +12,8 @@ namespace Luccy.Mapping.Sys
     {
         public SysRole2UserMap()
         {
-            this.ToTable("SysRole2User");
-            this.HasKey(t => t.Id);
+            this.ToTable("SysRoleSysUser");
+         
         }
     }
 }
